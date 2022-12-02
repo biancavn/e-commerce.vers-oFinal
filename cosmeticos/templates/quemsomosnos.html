@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Quem somos nós {% endblock %}
+
+{% block conteudo %}
+
+<section>
+  <h1 class="display-4 text-white mark titulo">Quem somos nós?</h1>
+  <div class="centraliza_imagem ">
+    <img src="{% static 'img/rotina.png' %}" width="1000px" style="margin-bottom: 20px;" class="rounded" alt="">
+  </div>
+  <div class="quemsomosnos texto">
+    <p>Criada em 2022, o empreendimento veio de uma demanda antiga, mas pouco explorada: como encontrar os produtos
+      certos
+      para meu tipo de pele? Pois bem, nossa empresa, com o auxílio de profissionais especializados na área, seleciona
+      os
+      cosméticos adequados para as necessidades de cada pele. Isso porque reconhecemos a importância dos cuidados com a
+      pele, por isso nos chamamos Santa Pele.</p>
+  </div>
+  <h1 class="display-4 text-white mark titulo">Nosso time:</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl col-md-6">
+        <img class="rounded-circle img-fluid centro" src="{% static 'img/Bianca_Viana.jpeg' %}" width="60%"
+          alt="Imagem de uma das componenetes do trabalho: Bianca Viana Costa">
+        <h2 class="h6 text-center nomes texto"><b>Bianca Viana Costa </b></h2>
+        <h2 class="h6 text-center nomes texto">Estudante do 4º ano de informática pelo IFRN </h2>
+      </div>
+      <div class="col-xl col-md-6">
+        <img class="rounded-circle img-fluid centro" src="{% static 'img/lorena_carvalho.jpeg' %}" width="59%"
+          alt="Imagem de uma das componenetes do trabalho: Lorena Carvalho Pinheiro de Aquino">
+        <h2 class="h6 text-center nomes texto"> <b>Lorena Carvalho Pinheiro de Aquino </b></h2>
+        <h2 class="h6 text-center nomes2 texto">Estudante do 4º ano de informática pelo IFRN </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

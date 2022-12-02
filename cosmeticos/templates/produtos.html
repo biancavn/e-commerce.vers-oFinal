@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo%} Produtos {% endblock %}
+
+{% block conteudo %}
+
+{% for cosmetico in cosmeticos %}
+<section class="col ">
+    <div class="card  margemProdutos" >
+        <div class="row g-0 d-flex justify-content-center">
+           <div class="col-md-4 img">
+                <a href="#"><img src="/media/{{ cosmetico.imagem }}" width="50%" class=" align-items-center" alt="imagem do cosmetico"></a>
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title titulo justificado">{{ cosmetico.nome }}</h5>
+                    <p class="card-text" style="font-size: 15px; color: gray;"> Categoria do cosmético: </p>
+                    <p class="more card-text">{{ cosmetico.categoria }}</p>
+                    <p class="card-text" style="font-size: 15px; color: gray;">Descrição do produto:</p>
+                    <p class="card-text justificado">{{ cosmetico.descricao }}</p>
+                    <p class="card-text vlr"  style="color: red;"> <b>R${{ cosmetico.valor }} </b></p>
+                    <a class="btn btn-primary cor" href="{% url 'detalhes' cosmetico.id %}" style="background-color: rgb(139, 74, 201)"role="button">Detalhes</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endfor %}
+
+{% endblock %}
